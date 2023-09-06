@@ -6,7 +6,7 @@ import {
   FaGoogle,
   FaRegEnvelope,
 } from "react-icons/fa";
-import { MdLockOutline } from "react-icons/md";
+import { MdLockOutline, MdOutlineDriveFileRenameOutline } from "react-icons/md";
 import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -24,7 +24,7 @@ export default function Home() {
             </div>
             <div className=" py-10">
               <h2 className=" text-3xl font-bold text-indigo-400 mb-2">
-                Sign in to account
+                Sign up
               </h2>
               <div className=" border-2 w-10 border-indigo-400  inline-block mb-2"></div>
               <div className=" flex justify-center my-2">
@@ -51,6 +51,24 @@ export default function Home() {
               <p className=" text-gray-400 my-3">or use your email account</p>
               <div className=" flex flex-col items-center">
                 <div className=" bg-gray-100 w-64 p-2 flex items-center mb-3 ">
+                  <MdOutlineDriveFileRenameOutline className=" text-gray-400 m-2" />
+                  <input
+                    type="firstname"
+                    name="firstname"
+                    placeholder="First Name"
+                    className=" bg-slate-100 outline-none text-sm flex-1"
+                  />
+                </div>
+                <div className=" bg-gray-100 w-64 p-2 flex items-center mb-3 ">
+                  <MdOutlineDriveFileRenameOutline className=" text-gray-400 m-2" />
+                  <input
+                    type="lastname"
+                    name="lastname"
+                    placeholder="Last Name"
+                    className=" bg-slate-100 outline-none text-sm flex-1"
+                  />
+                </div>
+                <div className=" bg-gray-100 w-64 p-2 flex items-center mb-3 ">
                   <FaRegEnvelope className=" text-gray-400 m-2" />
                   <input
                     type="email"
@@ -73,15 +91,12 @@ export default function Home() {
                     <input type="checkbox" name="remember" className="mr-1" />
                     Remember me
                   </label>
-                  <a href="#" className=" text-xs">
-                    Forgot password?
-                  </a>
                 </div>
                 <a
                   href="#"
                   className=" border-2 border-indigo-400 text-indigo-400 rounded-full px-12 py-2 inline-block font-semibold hover:bg-indigo-400 hover:text-white "
                 >
-                  Sign in
+                  Sign up
                 </a>
               </div>
             </div>
@@ -92,13 +107,13 @@ export default function Home() {
             <h2 className=" text-3xl font-bold mb-2">Welcome !</h2>
             <div className=" border-2 w-10 border-white inline-block mb-2"></div>
             <p className=" mb-10">
-              Fill up your personal information and start your journey with us.
+              Fill up your personal information and start you journey with us.
             </p>
             <Link
-              href="/signup"
+              href="/"
               className=" border-2 border-white rounded-full px-12 py-2 inline-block font-semibold hover:bg-white hover:text-indigo-400"
             >
-              Sign up
+              Sign in
             </Link>
           </div>{" "}
         </div>
